@@ -1,5 +1,7 @@
 import { SITE } from "../data/content";
 
+const TITLE_IMG = "/logo.png";
+
 const SOCIALS: { label: string; href: string }[] = [
   { label: "Discord", href: SITE.socials.discord },
   { label: "Reddit", href: SITE.socials.reddit },
@@ -14,13 +16,16 @@ export default function Footer() {
     <footer className="border-t border-white/5 pt-16 pb-10">
       <div className="container-wide grid md:grid-cols-12 gap-10">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="relative w-9 h-9 rounded-full bg-gradient-to-br from-neon-amber to-[#7a4a14]">
-              <div className="absolute top-0.5 right-0 w-7 h-7 rounded-full bg-noir-950" />
+          <div className="mb-4">
+            <img
+              src={TITLE_IMG}
+              alt="Under a Killing Moon"
+              className="h-14 w-auto select-none"
+              draggable={false}
+            />
+            <div className="font-display text-[10px] tracking-[0.3em] uppercase text-gray-500 mt-2">
+              Remake · Fan Project
             </div>
-            <span className="heading-display text-white">
-              Killing Moon <span className="text-neon-amber">// Remake</span>
-            </span>
           </div>
           <p className="text-sm text-gray-400 max-w-md">
             An independent passion project re-imagining the 1994 Tex Murphy

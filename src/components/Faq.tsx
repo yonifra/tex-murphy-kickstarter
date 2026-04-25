@@ -12,7 +12,7 @@ export default function Faq() {
         <div className="max-w-2xl mb-12">
           <div className="eyebrow mb-4">Frequently Asked</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white">
-            The <span className="text-neon-amber text-glow-amber">honest</span> answers.
+            The <span className="text-tex-orange">honest</span> answers.
           </h2>
         </div>
 

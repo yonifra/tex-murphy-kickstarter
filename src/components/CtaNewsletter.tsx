@@ -44,7 +44,7 @@ export default function CtaNewsletter() {
           <div className="eyebrow mb-5 justify-center">Don't miss launch day</div>
           <h2 className="heading-display text-3xl md:text-5xl text-white mb-5">
             Be on Chandler Avenue <br />
-            <span className="text-neon-amber text-glow-amber">when the doors open.</span>
+            <span className="text-tex-orange">when the doors open.</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-8">
             Backers on the list get the launch alert first, plus an early-bird

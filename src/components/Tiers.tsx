@@ -9,7 +9,8 @@ export default function Tiers() {
         <div className="max-w-2xl mb-14">
           <div className="eyebrow mb-4">Back the Remake</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white mb-5">
-            Pick your <span className="text-neon-amber text-glow-amber">case file.</span>
+            Pick your{" "}
+            <span className="text-tex-orange">case file.</span>
           </h2>
           <p className="text-gray-400 text-lg">
             Every tier moves the needle. Every backer gets credited. Pledges

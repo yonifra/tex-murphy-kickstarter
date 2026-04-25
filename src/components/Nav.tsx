@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { SITE } from "../data/content";
 
+const TITLE_IMG = "/logo.png";
+
 const LINKS = [
   { href: "#story", label: "Story" },
   { href: "#features", label: "Features" },
@@ -31,11 +33,14 @@ export default function Nav() {
     >
       <nav className="container-wide flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-center gap-3 group">
-          <div className="relative w-9 h-9 rounded-full bg-gradient-to-br from-neon-amber to-[#7a4a14] shadow-glow">
-            <div className="absolute top-0.5 right-0 w-7 h-7 rounded-full bg-noir-950" />
-          </div>
-          <span className="heading-display text-sm md:text-base text-white">
-            Killing Moon<span className="text-neon-amber"> //</span> Remake
+          <img
+            src={TITLE_IMG}
+            alt="Under a Killing Moon"
+            className="h-8 md:h-10 w-auto select-none"
+            draggable={false}
+          />
+          <span className="hidden sm:inline font-display text-[10px] tracking-[0.3em] uppercase text-gray-400 border-l border-white/15 pl-3">
+            Remake
           </span>
         </a>
 

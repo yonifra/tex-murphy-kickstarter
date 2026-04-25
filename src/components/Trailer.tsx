@@ -8,7 +8,8 @@ export default function Trailer() {
         <div className="max-w-2xl mb-12">
           <div className="eyebrow mb-4">Watch</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white">
-            Chandler Avenue, <span className="text-neon-amber text-glow-amber">in motion.</span>
+            Chandler Avenue,{" "}
+            <span className="text-tex-orange">in motion.</span>
           </h2>
         </div>
 

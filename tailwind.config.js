@@ -17,6 +17,15 @@ export default {
           cyan: "#5cf0ff",
           magenta: "#ff3df0",
         },
+        // Poster palette pulled from the 1994 cover art
+        tex: {
+          orange: "#ff3a14",      // Tex silhouette red-orange
+          orangeBright: "#ff5a2c",
+          moon: "#a9b3d6",        // pale lavender-blue moon
+          moonHi: "#dfe4f5",
+          moonLo: "#5a6388",
+          backdrop: "#080406",
+        },
       },
       fontFamily: {
         display: ['"Cinzel"', "serif"],
@@ -32,6 +41,8 @@ export default {
       boxShadow: {
         glow: "0 0 40px -8px rgba(255,181,71,0.45)",
         "glow-cyan": "0 0 40px -8px rgba(92,240,255,0.45)",
+        "glow-orange": "0 0 60px -10px rgba(255,58,20,0.55)",
+        "glow-moon": "0 0 120px 10px rgba(169,179,214,0.35)",
       },
       keyframes: {
         flicker: {

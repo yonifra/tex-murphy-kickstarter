@@ -35,16 +35,16 @@ src/
   index.css            # Tailwind layers + design tokens (.btn-primary, .card-noir, .heading-display, .eyebrow, .grain, .container-*)
   data/content.ts      # ALL copy lives here: SITE, FEATURES, TIERS, STRETCH_GOALS, ROADMAP, FAQ
   components/
-    Nav.tsx            # fixed top nav, scrolls fade-in
-    Hero.tsx           # custom SVG skyline + animated moon + CSS rain
-    Story.tsx          # plot + dossier card
-    Features.tsx       # icon grid (icon names are strings → mapped to lucide components)
-    Trailer.tsx        # YouTube embed (video id oP5sLixCQH8)
-    Tiers.tsx          # pledge tiers; tier.popular adds glow + "Most Backed" badge; accent: "amber" | "cyan"
-    Stretch.tsx        # stretch goals (state: "base"|"next"|"future") + roadmap timeline
-    Faq.tsx            # accordion (single-open)
-    CtaNewsletter.tsx  # email form
-    Footer.tsx
+    Nav.tsx              # fixed top nav, scrolls fade-in; logo = /logo.png
+    Hero.tsx             # /logo.png wordmark + /tex_murphy.png silhouette over CSS moon glow + rain/skyline
+    Story.tsx            # plot + dossier card with /tex_murphy.png watermark
+    Features.tsx         # icon grid (icon names are strings → mapped to lucide components)
+    Trailer.tsx          # YouTube embed (video id oP5sLixCQH8)
+    Tiers.tsx            # pledge tiers; tier.popular adds glow + "Most Backed" badge; accent: "amber" | "cyan"
+    Stretch.tsx          # stretch goals (state: "base"|"next"|"future") + roadmap timeline
+    Faq.tsx              # accordion (single-open)
+    CtaNewsletter.tsx    # email form
+    Footer.tsx           # /title.png logo + sitemap + socials
 ```
 
 ## Content editing rules
@@ -65,9 +65,13 @@ src/
 
 ## Assets
 
-- No bundled images. Trailer is a YouTube embed.
-- Favicon: `public/moon.svg` (inline SVG moon, matches brand).
+- **`public/logo.png`** — the brushy "Under a Killing Moon" wordmark in the original game style. Referenced as `/logo.png` in Hero, Nav, Footer.
+- **`public/tex_murphy.png`** — the Tex Murphy silhouette logo. Referenced as `/tex_murphy.png` in Hero (full-size, right column) and Story (low-opacity watermark in the dossier card).
+- Trailer is a YouTube embed (no local video).
+- Favicon: `public/moon.svg`.
 - `og.jpg` is referenced in `index.html` but does NOT exist yet — add one before going public, or remove the meta tag.
+
+> Image paths are plain root-relative strings (`"/title.png"`), NOT ES imports. Files in `public/` are served at the site root by Vite — do not move them into `src/` without changing the references.
 
 ## Gotchas
 

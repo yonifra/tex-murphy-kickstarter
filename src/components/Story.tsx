@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+const DETECTIVE_IMG = "/tex_murphy.png";
+
 export default function Story() {
   return (
     <section id="story" className="section grain">
@@ -14,7 +16,7 @@ export default function Story() {
           <div className="eyebrow mb-4">Case File · 12 / 2042</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white mb-6">
             A legendary detective,{" "}
-            <span className="text-neon-amber text-glow-amber">reborn.</span>
+            <span className="text-tex-orange">reborn.</span>
           </h2>
 
           <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
@@ -54,10 +56,18 @@ export default function Story() {
           className="lg:col-span-5"
         >
           <div className="card-noir p-1">
-            <div className="aspect-[4/5] rounded-lg bg-[radial-gradient(ellipse_at_30%_20%,_rgba(255,181,71,0.25),_transparent_60%)] relative overflow-hidden">
+            <div className="aspect-[4/5] rounded-lg bg-[radial-gradient(ellipse_at_70%_30%,_rgba(169,179,214,0.18),_transparent_60%)] relative overflow-hidden">
+              {/* faint detective silhouette as backdrop watermark */}
+              <img
+                src={DETECTIVE_IMG}
+                alt=""
+                aria-hidden
+                className="absolute right-[-10%] bottom-0 h-[95%] w-auto object-contain opacity-30 mix-blend-screen pointer-events-none select-none"
+                draggable={false}
+              />
               {/* file dossier */}
-              <div className="absolute inset-0 p-6 font-mono text-[11px] text-neon-amber/80 leading-relaxed">
-                <div className="flex justify-between border-b border-neon-amber/30 pb-2 mb-3">
+              <div className="absolute inset-0 p-6 font-mono text-[11px] text-tex-orange/90 leading-relaxed">
+                <div className="flex justify-between border-b border-tex-orange/30 pb-2 mb-3">
                   <span>CONFIDENTIAL</span>
                   <span>FILE #042</span>
                 </div>
@@ -70,12 +80,12 @@ export default function Story() {
                   <div>THREAT-LEVEL: ████████░░ 8/10</div>
                   <div>EVIDENCE: PARTIAL · ASSUMED HOSTILE</div>
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 border-t border-neon-amber/30 pt-3 text-[10px] opacity-70">
+                <div className="absolute bottom-6 left-6 right-6 border-t border-tex-orange/30 pt-3 text-[10px] opacity-70">
                   // CASEFILE LOADED · DEC 2042 · NORM/MUTANT CLEARANCE: ALL
                 </div>
               </div>
               <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-              <div className="absolute -inset-1 rounded-lg shadow-glow pointer-events-none" />
+              <div className="absolute -inset-1 rounded-lg shadow-glow-orange pointer-events-none" />
             </div>
           </div>
         </motion.div>

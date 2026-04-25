@@ -27,7 +27,7 @@ export default function Features() {
           <div className="eyebrow mb-4">What's New</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white mb-5">
             A faithful remake. <br />
-            <span className="text-neon-amber text-glow-amber">Not a reskin.</span>
+            <span className="text-tex-orange">Not a reskin.</span>
           </h2>
           <p className="text-gray-400 text-lg">
             Every system rebuilt for 2026 — every detail still answers to 1994.

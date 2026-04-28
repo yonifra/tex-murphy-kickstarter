@@ -28,7 +28,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Cinzel"', "serif"],
+        display: ['"Noir"', '"Cinzel"', "serif"],
         mono: ['"Share Tech Mono"', "ui-monospace", "monospace"],
         body: ['"Inter"', "system-ui", "sans-serif"],
       },

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
-import { SITE } from "../data/content";
+import { PAGE_COPY, SITE } from "../data/content";
 
 export default function CtaNewsletter() {
   const [email, setEmail] = useState("");
@@ -41,15 +41,12 @@ export default function CtaNewsletter() {
           transition={{ duration: 0.7 }}
           className="card-noir p-10 md:p-14 text-center shadow-glow"
         >
-          <div className="eyebrow mb-5 justify-center">Don't miss launch day</div>
+          <div className="eyebrow mb-5 justify-center">{PAGE_COPY.newsletter.eyebrow}</div>
           <h2 className="heading-display text-3xl md:text-5xl text-white mb-5">
-            Be on Chandler Avenue <br />
-            <span className="text-tex-orange">when the doors open.</span>
+            {PAGE_COPY.newsletter.title}
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-8">
-            Backers on the list get the launch alert first, plus an early-bird
-            $5 discount on the Detective tier. No spam. No fluff. Just case
-            updates from the team.
+            {PAGE_COPY.newsletter.body}
           </p>
 
           <form
@@ -74,18 +71,18 @@ export default function CtaNewsletter() {
               />
             </div>
             <button type="submit" className="btn-primary whitespace-nowrap">
-              Notify Me <ArrowRight size={16} />
+              {PAGE_COPY.newsletter.button} <ArrowRight size={16} />
             </button>
           </form>
 
           {status === "ok" && (
             <p className="mt-4 text-sm text-neon-amber">
-              You're on the list. Watch your inbox — Tex will be in touch.
+              {PAGE_COPY.newsletter.success}
             </p>
           )}
           {status === "err" && (
             <p className="mt-4 text-sm text-neon-red">
-              That doesn't look like a valid email, detective.
+              {PAGE_COPY.newsletter.error}
             </p>
           )}
 
@@ -97,7 +94,7 @@ export default function CtaNewsletter() {
               rel="noopener noreferrer"
               className="text-neon-amber hover:underline"
             >
-              Back the Kickstarter
+              {PAGE_COPY.newsletter.secondaryCta}
             </a>
           </p>
         </motion.div>

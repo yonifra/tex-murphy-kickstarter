@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { FAQ } from "../data/content";
+import { FAQ, PAGE_COPY } from "../data/content";
 
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
@@ -10,9 +10,9 @@ export default function Faq() {
     <section id="faq" className="section">
       <div className="container-narrow">
         <div className="max-w-2xl mb-12">
-          <div className="eyebrow mb-4">Frequently Asked</div>
+          <div className="eyebrow mb-4">{PAGE_COPY.faq.eyebrow}</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white">
-            The <span className="text-tex-orange">honest</span> answers.
+            {PAGE_COPY.faq.title}
           </h2>
         </div>
 

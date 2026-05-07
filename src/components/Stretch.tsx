@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { STRETCH_GOALS, ROADMAP } from "../data/content";
+import { PAGE_COPY, STRETCH_GOALS, ROADMAP } from "../data/content";
 
 export default function Stretch() {
   return (
@@ -7,10 +7,9 @@ export default function Stretch() {
       <div className="container-wide grid lg:grid-cols-2 gap-16">
         {/* Stretch goals */}
         <div>
-          <div className="eyebrow mb-4">Stretch Goals</div>
+          <div className="eyebrow mb-4">{PAGE_COPY.stretch.eyebrow}</div>
           <h2 className="heading-display text-3xl md:text-4xl text-white mb-8">
-            The further we go, <br />
-            the deeper Tex digs.
+            {PAGE_COPY.stretch.title}
           </h2>
 
           <ol className="space-y-4">
@@ -62,9 +61,9 @@ export default function Stretch() {
 
         {/* Roadmap */}
         <div>
-          <div className="eyebrow mb-4">Roadmap</div>
+          <div className="eyebrow mb-4">{PAGE_COPY.stretch.roadmapEyebrow}</div>
           <h2 className="heading-display text-3xl md:text-4xl text-white mb-8">
-            From Kickstarter <br />to launch day.
+            {PAGE_COPY.stretch.roadmapTitle}
           </h2>
 
           <ol className="relative border-l-2 border-neon-amber/30 pl-8 space-y-8">

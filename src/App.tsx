@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Story from "./components/Story";
 import Features from "./components/Features";
 import Trailer from "./components/Trailer";
+import Showcase from "./components/Showcase";
 import Tiers from "./components/Tiers";
 import Stretch from "./components/Stretch";
 import Faq from "./components/Faq";
@@ -16,8 +17,9 @@ export default function App() {
       <main>
         <Hero />
         <Story />
-        <Features />
         <Trailer />
+        <Showcase />
+        <Features />
         <Tiers />
         <Stretch />
         <Faq />

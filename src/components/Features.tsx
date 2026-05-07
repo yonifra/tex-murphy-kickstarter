@@ -6,9 +6,12 @@ import {
   Film,
   Music,
   Search,
+  CloudRain,
+  DoorOpen,
+  Mic2,
   type LucideIcon,
 } from "lucide-react";
-import { FEATURES } from "../data/content";
+import { FEATURES, PAGE_COPY } from "../data/content";
 
 const ICONS: Record<string, LucideIcon> = {
   Sparkles,
@@ -17,6 +20,9 @@ const ICONS: Record<string, LucideIcon> = {
   Film,
   Music,
   Search,
+  CloudRain,
+  DoorOpen,
+  Mic2,
 };
 
 export default function Features() {
@@ -24,14 +30,12 @@ export default function Features() {
     <section id="features" className="section">
       <div className="container-wide">
         <div className="max-w-2xl mb-16">
-          <div className="eyebrow mb-4">What's New</div>
+          <div className="eyebrow mb-4">{PAGE_COPY.features.eyebrow}</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white mb-5">
-            A faithful remake. <br />
-            <span className="text-tex-orange">Not a reskin.</span>
+            {PAGE_COPY.features.title}
           </h2>
           <p className="text-gray-400 text-lg">
-            Every system rebuilt for 2026 — every detail still answers to 1994.
-            This is what 30 years of love letters to a cult classic looks like.
+            {PAGE_COPY.features.body}
           </p>
         </div>
 

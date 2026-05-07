@@ -1,21 +1,18 @@
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
-import { TIERS, SITE } from "../data/content";
+import { PAGE_COPY, TIERS, SITE } from "../data/content";
 
 export default function Tiers() {
   return (
     <section id="tiers" className="section relative">
       <div className="container-wide">
         <div className="max-w-2xl mb-14">
-          <div className="eyebrow mb-4">Back the Remake</div>
+          <div className="eyebrow mb-4">{PAGE_COPY.tiers.eyebrow}</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white mb-5">
-            Pick your{" "}
-            <span className="text-tex-orange">case file.</span>
+            {PAGE_COPY.tiers.title}
           </h2>
           <p className="text-gray-400 text-lg">
-            Every tier moves the needle. Every backer gets credited. Pledges
-            are processed by Kickstarter — you are only charged if the campaign
-            is funded.
+            {PAGE_COPY.tiers.body}
           </p>
         </div>
 
@@ -60,7 +57,9 @@ export default function Tiers() {
                     >
                       {tier.price}
                     </span>
-                    <span className="text-xs text-gray-500 uppercase">+ shipping</span>
+                    {tier.shipping && (
+                      <span className="text-xs text-gray-500 uppercase">+ shipping</span>
+                    )}
                   </div>
                   <p className="text-sm text-gray-400 mt-2 italic">{tier.tagline}</p>
                 </div>
@@ -99,9 +98,7 @@ export default function Tiers() {
         </div>
 
         <p className="text-center text-xs text-gray-500 mt-10 max-w-xl mx-auto">
-          All tiers include the digital backer-only newsletter and a credit in
-          the game. International shipping calculated at fulfilment. Tier
-          contents may evolve based on stretch-goal outcomes.
+          {PAGE_COPY.tiers.note}
         </p>
       </div>
     </section>

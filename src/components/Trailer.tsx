@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import { PAGE_COPY } from "../data/content";
 
 export default function Trailer() {
   return (
     <section id="trailer" className="section">
       <div className="container-wide">
         <div className="max-w-2xl mb-12">
-          <div className="eyebrow mb-4">Watch</div>
+          <div className="eyebrow mb-4">{PAGE_COPY.trailer.eyebrow}</div>
           <h2 className="heading-display text-4xl md:text-5xl text-white">
-            Chandler Avenue,{" "}
-            <span className="text-tex-orange">in motion.</span>
+            {PAGE_COPY.trailer.title}
           </h2>
         </div>
 
@@ -33,7 +33,7 @@ export default function Trailer() {
         </motion.div>
 
         <p className="mt-6 text-center text-sm text-gray-500 font-mono uppercase tracking-widest">
-          <Play size={12} className="inline mb-0.5" /> Chandler Avenue Teaser · Real-time UE5 capture
+          <Play size={12} className="inline mb-0.5" /> {PAGE_COPY.trailer.caption}
         </p>
       </div>
     </section>

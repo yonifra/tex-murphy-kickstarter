@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
-import { SITE } from "../data/content";
+import { PAGE_COPY, SITE } from "../data/content";
 
 const TITLE_IMG = "/logo.png";
 const DETECTIVE_IMG = "/tex_murphy.png";
@@ -74,7 +74,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-scanlines opacity-30 mix-blend-overlay" />
       </div>
 
-      <div className="container-wide relative pt-28 md:pt-24 pb-16 grid lg:grid-cols-12 gap-8 items-center">
+      <div className="container-wide relative pt-24 md:pt-24 pb-16 grid lg:grid-cols-12 gap-8 items-center">
         {/* Left: title + copy + CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -84,30 +84,41 @@ export default function Hero() {
         >
           <div className="eyebrow mb-5 flex items-center gap-3">
             <span className="inline-block w-8 h-px bg-tex-orange" />
-            Tex Murphy · 1994 Cult Classic · Reborn in Unreal 5
+            {PAGE_COPY.hero.eyebrow}
           </div>
 
-          {/* Title — uses the official-style logo PNG */}
-          <img
-            src={TITLE_IMG}
-            alt="Under a Killing Moon"
-            className="w-full max-w-xl md:max-w-2xl mb-8 select-none"
-            draggable={false}
-            style={{
-              filter:
-                "drop-shadow(0 0 24px rgba(255,255,255,0.12)) drop-shadow(0 6px 0 rgba(0,0,0,0.35))",
-            }}
-          />
+          <div className="mb-8 flex justify-center lg:block">
+            <img
+              src={DETECTIVE_IMG}
+              alt="Tex Murphy — silhouette in fedora and trench coat"
+              className="h-36 w-auto flex-none object-contain select-none sm:h-44 md:h-52 lg:hidden"
+              draggable={false}
+              style={{
+                filter:
+                  "drop-shadow(0 0 24px rgba(255,58,20,0.38)) drop-shadow(0 18px 34px rgba(0,0,0,0.58))",
+              }}
+            />
+
+            {/* Title — uses the official-style logo PNG */}
+            <img
+              src={TITLE_IMG}
+              alt="Under a Killing Moon"
+              className="hidden w-full min-w-0 max-w-xl select-none lg:block xl:max-w-2xl"
+              draggable={false}
+              style={{
+                filter:
+                  "drop-shadow(0 0 24px rgba(255,255,255,0.12)) drop-shadow(0 6px 0 rgba(0,0,0,0.35))",
+              }}
+            />
+          </div>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-4 leading-relaxed">
-            Old San Francisco, December 2042. Rain, neon, and a private eye one
-            case away from rock bottom. The legendary cyberpunk noir adventure
-            returns — rebuilt from the ground up, faithful to every frame.
+            {PAGE_COPY.hero.body}
           </p>
 
           <p className="font-mono text-sm text-tex-orange/90 mb-10 tracking-wider">
             <span className="inline-block w-2 h-2 rounded-full bg-tex-orange animate-pulse mr-2 align-middle" />
-            KICKSTARTER LAUNCHING SOON — JOIN THE BACKERS' LIST BELOW
+            {PAGE_COPY.hero.status}
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -117,19 +128,15 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn-primary animate-pulseGlow"
             >
-              Back the Kickstarter <ArrowRight size={16} />
+              {PAGE_COPY.hero.primaryCta} <ArrowRight size={16} />
             </a>
             <a href="#trailer" className="btn-ghost">
-              <Play size={16} /> Watch the Trailer
+              <Play size={16} /> {PAGE_COPY.hero.secondaryCta}
             </a>
           </div>
 
           <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg">
-            {[
-              ["1994", "Original Release"],
-              ["400K+", "Original Copies Sold"],
-              ["UE 5", "Rebuilt From Scratch"],
-            ].map(([n, l]) => (
+            {PAGE_COPY.hero.stats.map(([n, l]) => (
               <div key={l}>
                 <div className="heading-display text-2xl md:text-3xl text-tex-orange">
                   {n}
@@ -147,7 +154,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.94, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="lg:col-span-5 relative h-[460px] sm:h-[600px] lg:h-[720px] order-first lg:order-last"
+          className="hidden lg:block lg:col-span-5 relative h-[720px] lg:order-last"
         >
           <div className="absolute inset-0 flex items-end justify-center">
             <img

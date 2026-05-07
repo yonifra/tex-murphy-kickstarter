@@ -6,9 +6,10 @@ const TITLE_IMG = "/logo.png";
 
 const LINKS = [
   { href: "#story", label: "Story" },
+  { href: "#showcase", label: "Proof" },
   { href: "#features", label: "Features" },
   { href: "#tiers", label: "Back It" },
-  { href: "#stretch", label: "Stretch Goals" },
+  { href: "#stretch", label: "Goals" },
   { href: "#faq", label: "FAQ" },
 ];
 

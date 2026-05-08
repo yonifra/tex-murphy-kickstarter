@@ -232,6 +232,7 @@ export const CAMPAIGN_PAGE = {
     "Intro",
     "Why this remake",
     "1994 vs remake",
+    "HD FMV restoration",
     "Feature footage",
     "Remake features",
     "Visual filters",
@@ -271,6 +272,12 @@ export const CAMPAIGN_PAGE = {
       title: "What backer funding helps finish",
       body:
         "These short clips show concrete remake pillars: volumetric atmosphere, a modernized interface, a connected Chandler Avenue without loading screens, and new optional interactions that make the world feel lived in.",
+    },
+    fmv: {
+      eyebrow: "HD FMV Restoration",
+      title: "The original performances, upgraded for modern screens",
+      body:
+        "Under a Killing Moon was built around full-motion video performances. The remake preserves that identity by reconstructing footage from digitized 1994 tapes and using advanced upscaling to move from the original 480i presentation toward HD and 2K quality.",
     },
     features: {
       eyebrow: "Remake Features",
@@ -362,6 +369,30 @@ export const CAMPAIGN_PAGE = {
     remake: "Remake",
     original: "Original 1994",
   },
+  fmvLabels: {
+    old: "Original / source-era footage",
+    new: "HD reconstructed footage",
+  },
+  fmvComparisons: [
+    {
+      title: "FMV Restoration Sample A",
+      body: "The remake keeps the original filmed performances while making them readable on modern displays.",
+      old: "/showcase/video/fmv-a-old.mp4",
+      new: "/showcase/video/fmv-a-new.mp4",
+    },
+    {
+      title: "FMV Restoration Sample B",
+      body: "Sharper video helps the cast performances hold up beside the rebuilt 3D world.",
+      old: "/showcase/video/fmv-b-old.mp4",
+      new: "/showcase/video/fmv-b-new.mp4",
+    },
+    {
+      title: "FMV Restoration Sample C",
+      body: "This is one of the clearest backer-facing upgrades: same performances, significantly improved presentation.",
+      old: "/showcase/video/fmv-c-old.mp4",
+      new: "/showcase/video/fmv-c-new.mp4",
+    },
+  ],
   rewardLabels: {
     tier: "Tier",
     pledge: "Pledge",
